@@ -1,13 +1,16 @@
 public class QueuA {
     //creating a class which stores array of size n and its functions
-    public static class Queu{
+     static class Queu{
         static int [] arr;              //initializing rear with -1 so that there is no element
-        static int rear= -1;
+        static int rear;
         static int size;
+        //constructor to store the data
         Queu(int n){
-            arr= new int[n];           //contstructor contains array of size n
             this.size =n;
+            arr= new int[n];           //contstructor contains array of size n
+            rear = -1;
         }
+
         public static boolean isEmpty(){            //check if an array is empty then return true
             return rear==-1;
         }
@@ -46,10 +49,18 @@ public class QueuA {
             }
             return arr[0];
         }
-
-
     }
     public static void main(String[] args) {
+
+        Queu kk = new Queu(5);
+        kk.add(5);
+        kk.add(3);
+        kk.add(4);
+        while(!kk.isEmpty()){
+            System.out.println(kk.peek());
+            kk.remove();
+        }
+
 
     }
 }
