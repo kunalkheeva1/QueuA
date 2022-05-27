@@ -22,6 +22,19 @@ public class QueuA {
             rear++;                      //otherwise the rear will be incrementing
             arr[rear]=data;              //rear is my index and data will be my output when I try to input my number
         }
+        //deque function
+        public static int remove(){
+            if(isEmpty()){                  //just in case if there is no element to delete
+                System.out.println("Empty Queu");
+                return -1;
+            }
+            int front = arr[0];             //front element
+            for(int i=0; i<rear; i++){          //shifting all the elements usigng the loops
+                arr[i]= arr[i+1];
+            }
+            rear--;                             //decreasing the size of the array after deleting
+            return front;                       //returning the elemnt that was deleted
+        }
 
     }
     public static void main(String[] args) {
