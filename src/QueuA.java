@@ -53,7 +53,7 @@ public class QueuA {
     public static void main(String[] args) {
 
         Queu kk = new Queu(5);
-        kk.add(5);
+        kk.add(5);                      //I could not figure out wwhy was not it working at first but later I assumed that in this IDE i need to add the pranthesis by my self
         kk.add(3);
         kk.add(4);
         while(!kk.isEmpty()){
