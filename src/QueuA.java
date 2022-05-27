@@ -22,6 +22,8 @@ public class QueuA {
             rear++;                      //otherwise the rear will be incrementing
             arr[rear]=data;              //rear is my index and data will be my output when I try to input my number
         }
+
+
         //deque function
         public static int remove(){
             if(isEmpty()){                  //just in case if there is no element to delete
@@ -35,6 +37,16 @@ public class QueuA {
             rear--;                             //decreasing the size of the array after deleting
             return front;                       //returning the elemnt that was deleted
         }
+
+        //Now working of Peek method
+        public static int peek(){
+            if(isEmpty()){
+                System.out.println("Empty Queu");
+                return -1;
+            }
+            return arr[0];
+        }
+
 
     }
     public static void main(String[] args) {
